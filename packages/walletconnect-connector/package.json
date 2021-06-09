@@ -30,9 +30,9 @@
     "dist"
   ],
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "lint": "tsdx lint src"
+    "start": "npx tsdx watch",
+    "build": "npx tsdx build",
+    "lint": "npx tsdx lint src"
   },
   "dependencies": {
     "@walletconnect/web3-provider": "^1.4.1",
