@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "web3-react",
+  "version": "0.0.0",
   "description": "A simple, maximally extensible, dependency minimized framework for building modern Ethereum dApps",
   "keywords": [
     "react",
