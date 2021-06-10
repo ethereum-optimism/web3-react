@@ -2,6 +2,9 @@
   "private": true,
   "name": "web3-react",
   "version": "0.0.0",
+  "main": "packages/walletconnect-connector/dist/index.js",
+  "module": "packages/walletconnect-connector/dist/walletconnect-connector.esm.js",
+  "typings": "packages/walletconnect-connector/dist/index.d.ts",
   "description": "A simple, maximally extensible, dependency minimized framework for building modern Ethereum dApps",
   "keywords": [
     "react",
