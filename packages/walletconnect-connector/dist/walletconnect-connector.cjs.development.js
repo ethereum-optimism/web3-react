@@ -192,7 +192,7 @@ var WalletConnectConnector = /*#__PURE__*/function (_AbstractConnector) {
       console.log("Handling 'disconnect' event");
     }
 
-    this.emitDeactivate(); // we have to do this because of a @walletconnect/ethereum-provider bug
+    this.emitDeactivate(); // we have to do this because of a @walletconnect/web3-provider bug
 
     if (this.walletConnectProvider) {
       this.walletConnectProvider.stop();
@@ -249,7 +249,7 @@ var WalletConnectConnector = /*#__PURE__*/function (_AbstractConnector) {
 
       var _temp6 = function () {
         if (!_this4.walletConnectProvider) {
-          return Promise.resolve(new Promise(function (resolve) { resolve(_interopNamespace(require('@walletconnect/ethereum-provider'))); }).then(function (m) {
+          return Promise.resolve(new Promise(function (resolve) { resolve(_interopNamespace(require('@walletconnect/web3-provider'))); }).then(function (m) {
             var _m$default;
 
             return (_m$default = m == null ? void 0 : m["default"]) != null ? _m$default : m;
