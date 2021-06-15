@@ -58,7 +58,7 @@ export class WalletConnectConnector extends AbstractConnector {
       console.log("Handling 'disconnect' event")
     }
     this.emitDeactivate()
-    // we have to do this because of a @walletconnect/web3-provider bug
+    // we have to do this because of a @walletconnect/ethereum-provider bug
     if (this.walletConnectProvider) {
       this.walletConnectProvider.stop()
       this.walletConnectProvider.removeListener('chainChanged', this.handleChainChanged)
@@ -71,7 +71,7 @@ export class WalletConnectConnector extends AbstractConnector {
 
   public async activate(): Promise<ConnectorUpdate> {
     if (!this.walletConnectProvider) {
-      const WalletConnectProvider = await import('@walletconnect/web3-provider').then(m => m?.default ?? m)
+      const WalletConnectProvider = await import('@walletconnect/ethereum-provider').then(m => m?.default ?? m)
       this.walletConnectProvider = new WalletConnectProvider(this.config)
     }
 
